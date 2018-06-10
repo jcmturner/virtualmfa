@@ -21,9 +21,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	ticker := time.NewTicker(time.Second)
-	defer ticker.Stop()
-
 	p := mpb.New(
 		// override default (80) width
 		mpb.WithWidth(60),
@@ -39,8 +36,10 @@ func main() {
 		os.Exit(1)
 	}
 
+	ticker := time.NewTicker(time.Second)
+	defer ticker.Stop()
 	for {
-		time.Sleep(time.Second)
+		<-ticker.C
 		bar.Increment()
 		if bar.Completed() {
 			bar, err = newOTP(mfa, p)
