@@ -10,9 +10,11 @@ $ ./virtualmfa
 Enter MFA Secret: 
 ```
 Paste in your MFA secret and one time passwords will be return with a bar indicating its lifetime.
+New one time passwords will be continuously generated until the command is exited with Ctrl-C
 
 For example:
 ```
+$ ./virtualmfa
 Enter MFA Secret: 
 709801  ╢▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌░░░░░░░░░░░░╟ 
 ```
