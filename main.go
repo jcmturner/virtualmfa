@@ -58,7 +58,7 @@ func newOTP(mfa string, p *mpb.Progress) (*mpb.Bar, error) {
 	}
 	bar := p.AddBar(int64(c),
 		mpb.PrependDecorators(
-			decor.StaticName(otp, len(otp)+1, decor.DidentRight),
+			decor.StaticName(otp, decor.WC{W: len(otp) + 1, C: decor.DidentRight}),
 		),
 		mpb.BarRemoveOnComplete(),
 	)
