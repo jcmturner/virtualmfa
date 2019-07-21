@@ -8,10 +8,10 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/jcmturner/gootp"
 	"github.com/vbauerster/mpb"
 	"github.com/vbauerster/mpb/decor"
 	term "golang.org/x/crypto/ssh/terminal"
-	"gopkg.in/jcmturner/gootp.v1"
 )
 
 func main() {
